@@ -55,7 +55,7 @@ Results
 Using Logistic Regression, the final prediction model:
 
 - included 21 variables and 41 interactions between these variables
-- resulted in predictions with a balanced accuracy of 80%, verified by ROC Curve
+- resulted in predictions with a balanced accuracy of 80%, verified by ROC Curve and test/validation datasets
 - could potentially be improved using other review/hours variables or data for other cities
 
 The full report and code can be found at:
