@@ -8,7 +8,7 @@ Data from the <a href="http://www.yelp.com/dataset_challenge">Yelp Data Challeng
 
 Approximately 12% of companies available in the Yelp data are no longer in business.  Question: Using the Yelp dataset, can a company's open or closed status be determined by variables, such as:  
 
-*  number or stars or frequency of a business review  
+*  number of stars or frequency of a business review  
 *  business attributes, such as a company's noise level or that it is oriented toward children  
 *  business type, such as a juice bar or bike shop  
 

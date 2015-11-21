@@ -73,9 +73,9 @@ img {
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
 <p>Data from the <a href="http://www.yelp.com/dataset_challenge">Yelp Data Challenge</a> was presented for analysis as the Coursera Data Science Specialization capstone project (October 2015). Students were instructed to formulate a question to address through inferential or predictive analysis of the data.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
-<p>Approximately 12% of companies available in the yelp data are no longer in business. Question: Using the Yelp dataset, can a company’s open or closed status be determined by variables, such as:</p>
+<p>Approximately 12% of companies available in the Yelp data are no longer in business. Question: Using the Yelp dataset, can a company’s open or closed status be determined by variables, such as:</p>
 <ul>
-<li>number or stars or frequency of a business review<br /></li>
+<li>number of stars or frequency of a business review<br /></li>
 <li>business attributes, such as a company’s noise level or that it is oriented toward children<br /></li>
 <li>business type, such as a juice bar or bike shop</li>
 </ul>
@@ -281,7 +281,7 @@ CreditCard
 </tr>
 </table>
 <p><br> Many of the variables of the original dataset correlated with each other which could be problematic if used in the model; in fact, more than 116 variable sets alone had greater than 0.60 correlation. The author chose not to focus on selection using this information with the expectation that information available using cross-tabulation plots (via mosaic plots using the vcd package) might be more efficient for predictor selection. Nevertheless, the correlation data informed the selection between business type (“category” variables) and business attributes when correlation existed; attributes appeared to be more useful in most cases.</p>
-<p>Mosaic plots were created for each of the variables in the exploratory data set and reviewed for differences between the number of open versus closed businesses for each variable. The advantage of a mosaic plot over a boxplot is that the volume of observations for each subset (i.e., open/closed) can be easily seen. A sample of the plots used are provided in Table 2. Variables with subsets which not only had viewable differences, but also had a sufficient volume of observations were added to the initial modelling data set.</p>
+<p>Mosaic plots were created for each of the variables in the exploratory data set and reviewed for differences between the number of open versus closed businesses for each variable. The advantage of a mosaic plot over a boxplot is that the volume of observations for each subset (i.e., open/closed) can be easily seen. A sample of the plots used are provided in Figure 2. Variables with subsets which not only had viewable differences, but also had a sufficient volume of observations were added to the initial modelling data set.</p>
 <b><i>
 <H5 align="center">
 Figure 2. Sample of Mosaic Plots Used for Exploration

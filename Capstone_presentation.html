@@ -797,9 +797,9 @@ hljs.initHighlightingOnLoad();
 <p>Approximately 12% of companies available in the <a href="http://www.yelp.com/dataset_challenge">Yelp Challenge</a> data are no longer in business.  Using the dataset, can a company&#39;s open or closed status be determined by variables, such as:  </p>
 
 <ul>
-<li> number or stars or frequency of a business review<br/></li>
-<li> business attributes, such as a company&#39;s noise level or that it is oriented toward children<br/></li>
-<li> business type, such as a juice bar or bike shop<br/></li>
+<li>number of stars or frequency of a business review<br/></li>
+<li>business attributes, such as a company&#39;s noise level or that it is oriented toward children<br/></li>
+<li>business type, such as a juice bar or bike shop<br/></li>
 </ul>
 
 </div>
@@ -819,26 +819,60 @@ hljs.initHighlightingOnLoad();
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Model &amp; Results</h3>
-<div class="slideContent" >
-<p>Using Logistic Regression, the final prediction model:</p>
-
+<h3>Analysis </h3>
+<div class="column column1 slideContent" style="width: 53%;" >
 <ul>
-<li>included Phoenix, AZ businesses only for computational efficency</li>
-<li>included 21 variables and 41 interactions between these variables</li>
-<li>resulted in predictions with a balanced accuracy of 80%, verified by ROC Curve</li>
-<li>could potentially be improved using other review/hours variables or data for other cities</li>
+<li>5,858 Phoenix businesses with 635 variables; reviews covered a 10-year period</li>
+<li>examined correlations with &ldquo;open&rdquo; businesses&hellip;weak (see table)</li>
+<li>examined correlations amongst potential predictor variables&hellip;many</li>
+<li>plotted potential predictors against &ldquo;open&rdquo; variable&hellip;selected for variance</li>
 </ul>
+
+
+</div>
+
+<div class="column column2 slideContent" style="width: 43%;" >
+
+
+<!-- html table generated in R 3.2.2 by xtable 1.8-0 package -->
+
+<!-- Wed Nov 18 19:47:05 2015 -->
+
+<table align="center" table border=1>
+<tr> <th>VarID  </th> <th> Variable Name </th> <th> Freq </th>  </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px" td style="padding: 0px 1px 0px 1px"> 18 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Wheelchair.Accessible </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.18 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 35 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Good.For.dinner </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.17 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 15 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Waiter.Service </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.15 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 72 </td> <td style="padding: 0px 1px 0px 1px"> cat.Restaurants </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.15 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 591 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Attire.casual </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.14 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 8 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Outdoor.Seating </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.12 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 13 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Take.out </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.12 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 586 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Alcohol.full_bar </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.12 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 7 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Good.For.Groups </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.11 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 14 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Takes.Reservations </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.11 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 41 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Parking.lot </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.11 </td> </tr>
+  <tr> <td align="right" td style="padding: 0px 1px 0px 1px"> 34 </td> <td style="padding: 0px 1px 0px 1px"> attributes.Good.For.lunch </td> <td align="right" td style="padding: 0px 1px 0px 1px"> -0.10 </td> </tr>
+
+   </table>
+
+<p><br></p>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>For more information...</h3>
+<h3>Results</h3>
 <div class="slideContent" >
-<p>The full report and code can be found at:</p>
+<p>Using Logistic Regression, the final prediction model:</p>
 
-<p><a href="https://github.com/margiehertneck/DSCapstone">https://github.com/margiehertneck/DSCapstone</a> </p>
+<ul>
+<li>included 21 variables and 41 interactions between these variables</li>
+<li>resulted in predictions with a balanced accuracy of 80%, verified by ROC Curve</li>
+<li>could potentially be improved using other review/hours variables or data for other cities</li>
+</ul>
+
+<p>The full report and code can be found at:
+<a href="https://github.com/margiehertneck/DSCapstone">https://github.com/margiehertneck/DSCapstone</a> </p>
 
 </div>
 
